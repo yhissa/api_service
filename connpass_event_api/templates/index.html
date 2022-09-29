@@ -1,10 +1,11 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block content %}
+{% include "header.html" %}
 <h2><a href="https://connpass.com/about/api/">イベントサーチAPI</a></h2>
 <p>を利用してPython関連のイベントを一覧にしています。</p>
 
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -23,12 +24,14 @@
       <th scope="row"></th>
       <td>{{ result['title'] }}</td>
       <td>{{ result['catch'] }}</td>
-      <td>{{ result['started_at'] }}</td>
-      <td>{{ result['ended_at'] }}</td>
+      <td>{{ result['started_at'][:10] }} {{ result['started_at'][11:16] }}</td>
+      <td>{{ result['ended_at'][:10] }} {{ result['ended_at'][11:16] }}</td>
       <td>{{ result['address'] }}</td>
       <td><a href="{{ result['event_url'] }}">Link</a></td>
     </tr>
 {% endfor %}
 </tbody>
 </table>
+
+{% include "footer.html" %}
 {% endblock %}
