@@ -1,0 +1,12 @@
+
+{% block content %}
+{% include "header.html" %}
+<h2><a href="https://openbd.jp/">openBDの書籍検索API</a></h2>
+<p>を利用して検索した書籍の概要を表示しています。</p>
+    {{ results['title'] }}<br>
+    {{ results['publisher'] }}<br>
+    {{ results['author'] }}<br>
+    <img class="fit-picture" src="{{results['cover']}}" alt="Grapefruit slice atop a pile of other slices"> }}
+
+{% include "footer.html" %}
+{% endblock %}
