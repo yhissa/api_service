@@ -6,7 +6,8 @@
     {{ results['title'] }}<br>
     {{ results['publisher'] }}<br>
     {{ results['author'] }}<br>
-    <img class="fit-picture" src="{{results['cover']}}" alt="Grapefruit slice atop a pile of other slices"> }}
+    {{ price }}<br>
+    <img class="fit-picture" src="{{results['cover']}}" height="200" alt="Grapefruit slice atop a pile of other slices">
 
 {% include "footer.html" %}
 {% endblock %}
