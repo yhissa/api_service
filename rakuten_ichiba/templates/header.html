@@ -12,36 +12,52 @@
   </head>
   <body>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <!-- Rakuten Web Services Attribution Snippet FROM HERE -->
-    <a href="https://webservice.rakuten.co.jp/" target="_blank"><img src="https://webservice.rakuten.co.jp/img/credit/200709/credit_22121.gif" border="0" alt="Rakuten Web Service Center" title="Rakuten Web Service Center" width="221" height="21"/></a>
-    <!-- Rakuten Web Services Attribution Snippet TO HERE -->
-
-  <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #003333;">
+  <a class="navbar-brand text-white" href="{{url_for('home')}}">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+        <a class="nav-link dropdown-toggle text-white" href="{{url_for('home')}}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          本・雑誌・コミック
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="{{url_for('home')}}">本・雑誌・コミック</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='novel')}}">小説・エッセイ</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='license')}}">資格・検定</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='life')}}">ライフスタイル</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='appendix')}}">付録つき</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='hobby')}}">ホビー・スポーツ・美術</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='picture_book')}}">絵本・児童書・図鑑</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='study')}}">語学・学習参考書</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='travel')}}">旅行・留学・アウトドア</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='humanities')}}">人文・地歴・哲学・社会</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='business')}}">ビジネス・経済・就職</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='pc_system')}}">PC・システム開発</a>
+          <a class="dropdown-item" href="#">科学・医学・技術</a>
+          <a class="dropdown-item" href="#">コミック</a>
+          <a class="dropdown-item" href="#">ライトノベル</a>
+          <a class="dropdown-item" href="#">ボーイズラブ</a>
+          <a class="dropdown-item" href="#">エンターテインメント</a>
+          <a class="dropdown-item" href="{{url_for('genre', category='photo')}}">写真集・タレント</a>
+          <a class="dropdown-item" href="#">文庫・新書</a>
+          <a class="dropdown-item" href="#">古書・希少本</a>
+          <a class="dropdown-item" href="#">オンデマンド書籍</a>
+          <a class="dropdown-item" href="#">楽譜</a>
+          <a class="dropdown-item" href="#">雑誌</a>
+          <a class="dropdown-item" href="#">新聞</a>
+          <a class="dropdown-item" href="#">洋書</a>
+          <a class="dropdown-item" href="#">カレンダー</a>
+          <a class="dropdown-item" href="#">ポスター</a>
+          <a class="dropdown-item" href="#">パンフレット</a>
+          <a class="dropdown-item" href="#">その他</a>
+
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+
     </ul>
   </div>
 </nav>

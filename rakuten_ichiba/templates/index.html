@@ -2,8 +2,10 @@
 {% block content %}
 {% include "header.html" %}
 <br><br><br>
-<div class="text-nowrap bd-highlight" style="width: 8rem;">
-  {{ page_title }}
+<div class="container">
+  <div class="text-nowrap bd-highlight" style="width: 8rem;">
+    {{ page_title }} <font size="1" color="gray">このサイトは楽天ウェブサービスのランキングAPIを利用して作成しています。</font>
+  </div>
 </div>
 
 {% for result in results %}
@@ -12,12 +14,12 @@
     <div class="container py-4">
       <div class="card-deck mb-3 text-center">
   {% endif %}
-      <div class="card" style="width: 16rem;">
+      <div class="card border-dark" style="width: 16rem;">
         {{ result['Item']['rank'] }}位
         <img src="{{ result['Item']['mediumImageUrls'][0]['imageUrl'] }}" class="img-thumbnail mx-auto">
         <div class="card-body">
-          <a href="{{ result['Item']['itemUrl'] }}"><h5 class="card-title">{{ result['Item']['itemName'] }}</h5></a>
-          <p class="card-text">{{ result['Item']['catchcopy'] }}</p>
+          <a href="{{ result['Item']['itemUrl'] }}"><p class="card-title"><font color="#000000">{{ result['Item']['itemName'] }}</font></p></a>
+          <p class="card-text"><font size="2" color="#696969">{{ result['Item']['catchcopy'] }}</font></p>
 
         </div>
       </div>
@@ -26,30 +28,6 @@
     </div>
   {% endif %}
 {% endfor %}
-
-
-
-
-<!--{% for result in results %}-->
-<!--<div class="container">-->
-<!--  <div class="card text-white bg-secondary mb-3" style="max-width: 540px;">-->
-<!--    <div class="row no-gutters">-->
-<!--      <div class="col-md-2 px-1 py-1">-->
-<!--        {{ result['Item']['rank'] }}位-->
-<!--        <img src="{{ result['Item']['mediumImageUrls'][0]['imageUrl'] }}" class="img-thumbnail mx-auto">-->
-<!--      </div>-->
-
-<!--      <div class="col-md-10">-->
-<!--        <div class="card-body">-->
-<!--          <h5 class="card-title">{{ result['Item']['itemName'] }}</h5>-->
-<!--          <p class="card-text">asdfa;kasd;jasdfkjlsdj;ijeiaoisjdfoaijsda;kdjajdjfalkdj;lajskd.</p>-->
-<!--          <p class="card-text"><small class="text-muted">{{ result['Item']['itemPrice'] }}</small></p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--{% endfor %}-->
 
 {% include "footer.html" %}
 {% endblock %}
