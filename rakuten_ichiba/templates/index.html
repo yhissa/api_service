@@ -1,10 +1,11 @@
 
 {% block content %}
 {% include "header.html" %}
+
 <br><br><br>
 <div class="container">
   <div class="text-nowrap bd-highlight" style="width: 8rem;">
-    {{ page_title }} <font size="1" color="gray">このサイトは楽天ウェブサービスのランキングAPIを利用して作成しています。</font>
+    {{ page_title }}
   </div>
 </div>
 
@@ -20,10 +21,10 @@
         <div class="card-body">
           <a href="{{ result['Item']['itemUrl'] }}"><p class="card-title"><font color="#000000">{{ result['Item']['itemName'] }}</font></p></a>
           <p class="card-text"><font size="2" color="#696969">{{ result['Item']['catchcopy'] }}</font></p>
-
         </div>
       </div>
-  {% if val+1 % 4 == 0 %}
+
+  {% if (val+1) % 4 == 0 %}
       </div>
     </div>
   {% endif %}
