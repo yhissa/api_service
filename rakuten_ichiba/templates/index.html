@@ -37,19 +37,13 @@
   <div class="text-nowrap bd-highlight" style="width: 8rem;">
     <nav aria-label="Page navigation example">
       <ul class="pagination">
+        {%if number > 1: %}
         <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number-1)}}">Previous</a></li>
+        {% endif %}
         <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number)}}">{{number}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+1)}}">{{number+1}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+2)}}">{{number+2}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+3)}}">{{number+3}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+4)}}">{{number+4}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+5)}}">{{number+5}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+6)}}">{{number+6}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+7)}}">{{number+7}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+8)}}">{{number+8}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+9)}}">{{number+9}}</a></li>
-        <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+10)}}">{{number+10}}</a></li>
+        {% if page_next != 'error' %}
         <li class="page-item"><a class="page-link" href="{{url_for('genre', category=category, page=number+1)}}">Next</a></li>
+        {% endif %}
       </ul>
     </nav>
   </div>
