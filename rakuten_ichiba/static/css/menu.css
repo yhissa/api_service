@@ -25,9 +25,7 @@
 */
 
 body {
-  background: #eaafc8;
-  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
-  background: linear-gradient(to right, #eaafc8, #654ea3);
+  background: #FFFFFF
   min-height: 100vh;
 }
 
@@ -40,4 +38,8 @@ code {
 
 .text-uppercase {
   letter-spacing: 0.08em;
+}
+
+.price {
+  color: red
 }

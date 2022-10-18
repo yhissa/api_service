@@ -1,5 +1,5 @@
 import configparser
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import requests
 
 file = configparser.ConfigParser()
@@ -12,7 +12,6 @@ app = Flask(__name__)
 def home(page=1):
     applicationId = file['settings']['applicationId']
     genreId = file['settings']['genreId_all_books']
-    #page = file['settings']['page']
     page_title = file['settings']['page_title_all_books']
     endpoint = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628"
     parameter = {
@@ -42,7 +41,6 @@ def genre(category, page=1):
         print(page)
     applicationId = file['settings']['applicationId']
     genreId = file['settings'][f'genreId_{category}']
-    #page = file['settings']['page']
     page_title = file['settings'][f'page_title_{category}']
     endpoint = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628"
     parameter = {

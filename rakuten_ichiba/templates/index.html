@@ -20,6 +20,7 @@
         <img src="{{ result['Item']['mediumImageUrls'][0]['imageUrl'] }}" class="img-thumbnail mx-auto">
         <div class="card-body">
           <a href="{{ result['Item']['itemUrl'] }}"><p class="card-title"><font color="#000000">{{ result['Item']['itemName'] }}</font></p></a>
+          <h5 class="price">{{ result['Item']['itemPrice'] }}円</h5>
           <p class="card-text"><font size="2" color="#696969">{{ result['Item']['catchcopy'] }}</font></p>
         </div>
       </div>
