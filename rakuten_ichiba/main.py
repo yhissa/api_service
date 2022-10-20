@@ -1,15 +1,21 @@
 import configparser
-from flask import Flask, render_template, request, redirect
-import requests
+from flask import Flask, render_template, request
+import requests, sys, os
+sys.path.append('/home/ranking100/mysite')
 
 file = configparser.ConfigParser()
 file.read('./config.txt', 'UTF-8')
+# config = configparser.ConfigParser()
+# config.read(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'config.txt'))
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def home(page=1):
+    # applicationId = config.get('settings', 'applicationId')
+    # genreId = config.get('settings', 'genreId_all_books')
+    # page_title = config.get('settings', 'page_title_all_books')
     applicationId = file['settings']['applicationId']
     genreId = file['settings']['genreId_all_books']
     page_title = file['settings']['page_title_all_books']
@@ -39,6 +45,9 @@ def genre(category, page=1):
     if request.args.get('page') != None:
         page = request.args.get('page')
         print(page)
+    # applicationId = config.get('settings', 'applicationId')
+    # genreId = config.get('settings', f'genreId_{category}')
+    # page_title = config.get('settings', f'page_title_{category}')
     applicationId = file['settings']['applicationId']
     genreId = file['settings'][f'genreId_{category}']
     page_title = file['settings'][f'page_title_{category}']
@@ -70,4 +79,4 @@ def genre(category, page=1):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

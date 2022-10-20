@@ -49,7 +49,7 @@
                         <li class="nav-item"><a href="{{url_for('genre', category='humanities')}}" class="nav-link text-small pb-0 ">人文・地歴・哲学・社会</a></li>
                         <li class="nav-item"><a href="{{url_for('genre', category='business')}}" class="nav-link text-small pb-0 ">ビジネス・経済・就職</a></li>
                         <li class="nav-item"><a href="{{url_for('genre', category='pc_system')}}" class="nav-link text-small pb-0 ">PC・システム開発</a></li>
-                        <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">科学・医学・技術</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='science')}}" class="nav-link text-small pb-0 ">科学・医学・技術</a></li>
                         <li class="nav-item"><a href="{{url_for('genre', category='comic')}}" class="nav-link text-small pb-0 ">コミック</a></li>
                         <li class="nav-item"><a href="{{url_for('genre', category='light_novel')}}" class="nav-link text-small pb-0 ">ライトノベル</a></li>
                         <li class="nav-item"><a href="{{url_for('genre', category='boys_love')}}" class="nav-link text-small pb-0 ">ボーイズラブ</a></li>
@@ -81,10 +81,70 @@
           </div>
         </div>
       </li>
+
+      <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-white font-weight-bold text-uppercase">CD・DVD</a>
+        <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0">
+          <div class="container">
+            <div class="row bg-white rounded-0 m-0 shadow-sm">
+              <div class="col-lg-10 col-xl-12">
+                <div class="p-2">
+                  <div class="row">
+                    <div class="col-lg-12 mb-2">
+                      <h6 class="font-weight-bold text-uppercase">CD・DVD</h6>
+                      <ul class="list-unstyled">
+<!--                        <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link text-small pb-0">CD・DVD</a></li>-->
+                        <li class="nav-item"><a href="{{url_for('genre', category='cd_dvd')}}" class="nav-link text-small pb-0 ">CD・DVD</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='cd')}}" class="nav-link text-small pb-0 ">CD</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='dvd')}}" class="nav-link text-small pb-0 ">DVD</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='blue_ray')}}" class="nav-link text-small pb-0 ">Blu-ray</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='record')}}" class="nav-link text-small pb-0 ">レコード</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='video')}}" class="nav-link text-small pb-0 ">ビデオ</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='cassette')}}" class="nav-link text-small pb-0 ">カセット</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='ld')}}" class="nav-link text-small pb-0 ">LD</a></li>
+                        <li class="nav-item"><a href="{{url_for('genre', category='other_cd')}}" class="nav-link text-small pb-0 ">その他</a></li>
+                      </ul>
+                    </div>
+<!--                    <div class="col-lg-4 mb-2">-->
+<!--                      <h6 class="font-weight-bold text-uppercase d-none">　</h6>-->
+<!--                      <ul class="list-unstyled">-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='humanities')}}" class="nav-link text-small pb-0 ">人文・地歴・哲学・社会</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='business')}}" class="nav-link text-small pb-0 ">ビジネス・経済・就職</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='pc_system')}}" class="nav-link text-small pb-0 ">PC・システム開発</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='science')}}" class="nav-link text-small pb-0 ">科学・医学・技術</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='comic')}}" class="nav-link text-small pb-0 ">コミック</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='light_novel')}}" class="nav-link text-small pb-0 ">ライトノベル</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='boys_love')}}" class="nav-link text-small pb-0 ">ボーイズラブ</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='entertainment')}}" class="nav-link text-small pb-0 ">エンターテインメント</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='photo')}}" class="nav-link text-small pb-0 ">写真集・タレント</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='bunko')}}" class="nav-link text-small pb-0 ">文庫・新書</a></li>-->
+<!--                      </ul>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 mb-2">-->
+<!--                      <h6 class="font-weight-bold text-uppercase d-none">　</h6>-->
+<!--                      <ul class="list-unstyled">-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='secondhand_book')}}" class="nav-link text-small pb-0 ">古書・希少本</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='on_demand')}}" class="nav-link text-small pb-0 ">オンデマンド書籍</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='musical_score')}}" class="nav-link text-small pb-0 ">楽譜</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='magazine')}}" class="nav-link text-small pb-0 ">雑誌</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='newspaper')}}" class="nav-link text-small pb-0 ">新聞</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='foreign_book')}}" class="nav-link text-small pb-0 ">洋書</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='calendar')}}" class="nav-link text-small pb-0 ">カレンダー</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='poster')}}" class="nav-link text-small pb-0 ">ポスター</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='pamphlet')}}" class="nav-link text-small pb-0 ">パンフレット</a></li>-->
+<!--                        <li class="nav-item"><a href="{{url_for('genre', category='other_books')}}" class="nav-link text-small pb-0 ">その他</a></li>-->
+<!--                      </ul>-->
+<!--                    </div>-->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
 <!--      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase text-white">About</a></li>-->
 <!--      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase text-white">Services</a></li>-->
 <!--      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase text-white">Contact</a></li>-->
     </ul>
   </div>
 </nav>
-
